@@ -284,7 +284,6 @@ If the index is negative or 0, or the member does not exist in the list, this co
 
 ##### Example of usage:
 
-`copyMember 1` or `cpm 1`<br/>
 This copies the details of the member at index 1 to the clipboard.
 
 ![Copy_Member](images/copyMember.jpg)
@@ -301,6 +300,38 @@ Tasks:
 ```
 
 #### 4.1.7 Allocating a task to a member: `addTask` or `addt`
+
+Adds the specified task to the member at the specified index.
+
+##### Usage:
+
+`addTask {index} /task {taskDescription}`<br/>
+`addt {index} /task {taskDescription}`
+
+<div markdown="span" class="alert alert-primary">
+
+:information_source: **Notes about input parameter:** The input parameter will only take positive integers.
+If the index is negative or 0, or the member does not exist in the list, this command will throw an error.
+
+:information_source: **Notes about task parameters** The tasks field cannot be empty. If the tasks field is empty, it
+will throw an error.
+
+</div>
+
+#### Acceptable values for parameters:
+
+- `task`: Only alphanumeric characters, @, () are allowed
+- `phoneNumber`: Only numbers are allowed
+- `email`: Must follow the format of xyz@abc.wsd
+- `telegramHandle`: Only alphanumeric characters and underscore are allowed
+- `tag`: Only alphanumeric characters are allowed, tags are optional
+
+##### Example of usage:
+
+`addTask 1 /task Resolve issue #15` or `addt 1 /task Resolve issue #15`<br/>
+Adds the task `Resolve issue #15` to the member at index 1.
+
+![Add_Task](images/addTask.png)
 
 #### 4.1.8 Viewing all tasks allocated to a member: `viewTask` or `viewt`
 
